@@ -24,6 +24,13 @@ public class FunctionsExercises2 {
 
         var users = new ArrayList<String>(Arrays.asList("Toni@gmail.com", "Guti@gmail.com", "Simón@gmail.com"));
         System.out.println("La cadena más larga es: " + list(users));
+
+        System.out.println("El texto tiene " + texto("lorem ipsum dolor sic amet") + " vocales");
+
+        var lista = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        System.out.println("Los numeros pares son: " + lista(lista));
+
+        contrasenya("1234567890Jeje");
     }
 
     // 1. Crea una función que reciba dos números y devuelva el mayor de ambos.
@@ -83,13 +90,64 @@ public class FunctionsExercises2 {
 
     // 6.  Crea una función que reciba un texto y devuelva cuántas vocales contiene.
 
+    public static int texto(String texto) {
+
+        String textoLower = texto.toLowerCase().trim();
+        int contador = 0;
+
+        for (int i=0; i < textoLower.length(); i++) {
+            if ((textoLower.charAt(i) == 'a') || (textoLower.charAt(i) == 'e') || (textoLower.charAt(i) == 'i') || (textoLower.charAt(i) == 'o') || (textoLower.charAt(i) == 'u')) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    /* solución más limpia con el uso de indexOf:
+
+    public static int texto(String texto) {
+        String textoLower = texto.toLowerCase();
+        String vocales = "aeiou";
+        int contador = 0;
+
+        for (int i = 0; i < textoLower.length(); i++) {
+            if (vocales.indexOf(textoLower.charAt(i)) != -1) {
+                contador++;
+            }
+        }
+        return contador;
+    } */
+
+
 
     // 7. Diseña una función que reciba una lista de enteros y devuelva una nueva lista con solo los números pares.
 
+    public static ArrayList<Integer> lista(ArrayList<Integer> lista) {
+
+    var listaPares = new ArrayList<Integer>();
+
+        for (Integer unidad : lista) {
+            if (unidad % 2 == 0) {
+                listaPares.add(unidad);
+            }
+        }
+        return listaPares;
+    }
 
     // 8. Escribe una función que simule una contraseña segura:
     // recibe un String y devuelve true si tiene al menos 8 caracteres,
     // una mayúscula, una minúscula y un número.
+
+    public static boolean contrasenya(String contrasenya) {
+
+        if (contrasenya.length() >= 8) {
+            for (int i = 0; i < contrasenya.length(); i++) {
+                if() {
+
+                }
+            }
+        }
+    }
 
 
     // 9. Crea una función que reciba una frase y una palabra,
