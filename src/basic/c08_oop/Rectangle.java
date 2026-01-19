@@ -1,11 +1,27 @@
 package basic.c08_oop;
 
 public class Rectangle {
-   int largo;
-   int ancho;
+   private int largo;
+   private int ancho;
 
     public Rectangle(int largo, int ancho) {
         this.largo = largo;
+        this.ancho = ancho;
+    }
+
+    public int getLargo() {
+        return largo;
+    }
+
+    public void setLargo(int largo) {
+        this.largo = largo;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int ancho) {
         this.ancho = ancho;
     }
 

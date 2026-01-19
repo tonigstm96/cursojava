@@ -22,7 +22,7 @@ public class ClassesExercises {
         // 3. Añade un constructor a la clase Book que reciba title y author.
 
         Book libro2 = new Book("Inferno", "Barlowe");
-        System.out.println("El libro es " + libro2.title + " y su autor/a es " + libro2.author);
+        System.out.println("El libro es " + libro2.getTitle() + " y su autor/a es " + libro2.author);
 
         // 4. Crea una clase Car con atributos brand y model y un método showData().
 
@@ -41,7 +41,7 @@ public class ClassesExercises {
 
         BankAccount cuenta = new BankAccount(2000);
         cuenta.deposit(1500);
-        System.out.println(cuenta.balance);
+        System.out.println(cuenta.getBalance());
 
         // 7. Crea una clase Rectangle con métodos para calcular el área y el perímetro.
 
@@ -57,10 +57,10 @@ public class ClassesExercises {
 
         // 9. Crea varios objetos Person y guárdalos en un ArrayList.
 
-        Person a = new Person("Pepito",18);
-        Person b = new Person("Pepita",19);
-        Person c = new Person("Pepin",20);
-        Person d = new Person("Pepi",21);
+        Person a = new Person("Pepito",18, "12345678A");
+        Person b = new Person("Pepita",19, "12345678B");
+        Person c = new Person("Pepin",20, "12345678C");
+        Person d = new Person("Pepi",21, "12345678D");
 
         ArrayList<Person> personas = new ArrayList<>();
         personas.add(a);
@@ -71,12 +71,12 @@ public class ClassesExercises {
         //forma más rápida
 
         ArrayList<Person> personas2 = new ArrayList<>();
-        personas2.add(new Person("Pepito",18));
-        personas2.add(new Person("Pepita",19));
-        personas2.add(new Person("Pepin",20));
+        personas2.add(new Person("Pepito",18, "12345678A"));
+        personas2.add(new Person("Pepita",19, "12345678B"));
+        personas2.add(new Person("Pepin",20, "12345678C"));
 
         for (Person p : personas2) {
-            System.out.println("Persona: " + p.name + " edad: " + p.age);
+            System.out.println("Persona: " + p.getName() + " edad: " + p.getAge());
         }
 
 
